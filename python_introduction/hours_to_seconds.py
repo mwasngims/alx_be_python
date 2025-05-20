@@ -1,4 +1,4 @@
-h = 2
+hours = 2
 
-tosec = 3600 * h
-print(f"{h} hour(s) is {tosec} seconds.")
+tosec = 3600 * hours
+print(f"{hours} hour(s) is {tosec} seconds.")
