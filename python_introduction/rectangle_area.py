@@ -1,5 +1,5 @@
 width = 5
 length = 10
 
-Area = width * length
-print(f"The area of the rectangle is: {Area}")
+area = length * width
+print(f"The area of the rectangle is: {area}")
