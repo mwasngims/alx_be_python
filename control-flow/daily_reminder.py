@@ -5,17 +5,17 @@ priority = input("Priority (high/medium/low): ").lower()
 # Match Case to handle priority
 match priority:
     case "high":
-        message = f"Reminder: Your task '{task}' is HIGH priority."
+        message = f"Note: '{task}' is a high priority task. Consider completing it when you have free time."
     case "medium":
-        message = f"Reminder: Your task '{task}' is of MEDIUM priority."
+        message = f"Note: '{task}' is a medium priority task. Consider completing it when you have free time.."
     case "low":
-        message = f"Reminder: Your task '{task}' is LOW priority."
+        message = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
     case _:
-        message = f"Reminder: Your task '{task}' has an UNKNOWN priority."
+        message = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
 
 # Time-sensitive check
 if time_bound == "yes":
-    message += " This is a time-sensitive task that requires immediate attention today!"
+    message = f"Reminder: '{task}' is a {priority} priority task that requires immediate attention today!"
 
 # Print reminder
 print(message)
