@@ -1,6 +1,14 @@
-n = int(input("Enter a number to see its multiplication table:"))
 
+def main():
+    try:
+        number = int(input("Enter a number to see its multiplication table: "))
+    except ValueError:
+        print("Invalid input. Please enter an integer number.")
+        return
 
-for i in range(1, 11):
-    prod = n * i
-    print(f"{n} * {i} = {prod}")
+    for i in range(1, 11):
+        product = number * i
+        print(f"{number} * {i} = {product}")
+
+if __name__ == "__main__":
+    main()
