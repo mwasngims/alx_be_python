@@ -1,7 +1,6 @@
-# Prompt for task details
-task = input("Enter your task for today: ")
-priority = input("Enter the priority level (high, medium, low): ").lower()
-time_bound = input("Is the task time-bound (yes or no)?: ").lower()
+task = input("Enter your task: ")
+time_bound = input("Is it time-bound? (yes/no): ")
+priority = input("Priority (high/medium/low): ").lower()
 
 # Match Case to handle priority
 match priority:
@@ -14,12 +13,9 @@ match priority:
     case _:
         message = f"Reminder: Your task '{task}' has an UNKNOWN priority."
 
-# If the task is time-bound, emphasize urgency
-if time_bound == "yes":
+# Time-sensitive check
+if time_bound.lower() == "yes":
     message += " This is a time-sensitive task that requires immediate attention today!"
 
-# Print the reminder 3 times using a loop
-count = 0
-while count < 1:
-    print(message)
-    count += 1
+# Print reminder
+print(message)
