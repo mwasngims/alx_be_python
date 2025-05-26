@@ -14,7 +14,7 @@ match priority:
         message = f"Reminder: Your task '{task}' has an UNKNOWN priority."
 
 # Time-sensitive check
-if time_bound.lower() == "yes":
+if time_bound == "yes":
     message += " This is a time-sensitive task that requires immediate attention today!"
 
 # Print reminder
